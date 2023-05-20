@@ -89,41 +89,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 384 1160 560 1176)
+	(rect 480 624 656 640)
 	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
-	(text "red[3..0]" (rect 90 0 141 15)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 384 1280 560 1296)
-	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
-	(text "green[3..0]" (rect 90 0 158 15)(font "Arial" ))
-	(pt 0 8)
-	(drawing
-		(line (pt 0 8)(pt 52 8))
-		(line (pt 52 4)(pt 78 4))
-		(line (pt 52 12)(pt 78 12))
-		(line (pt 52 12)(pt 52 4))
-		(line (pt 78 4)(pt 82 8))
-		(line (pt 82 8)(pt 78 12))
-		(line (pt 78 12)(pt 82 8))
-	)
-)
-(pin
-	(output)
-	(rect 392 1384 568 1400)
-	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
-	(text "blue[3..0]" (rect 90 0 150 19)(font "Intel Clear" ))
+	(text "RGB[11..0]" (rect 90 0 159 15)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -1331,7 +1299,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect -128 800 -64 848)
+	(rect 144 776 208 824)
 	(text "AND2" (rect 1 0 32 13)(font "Arial" (font_size 6)))
 	(text "inst32432432" (rect 3 37 92 52)(font "Arial" ))
 	(port
@@ -1467,6 +1435,35 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(drawing
 		(rectangle (rect 16 16 208 144))
+	)
+)
+(symbol
+	(rect 208 608 448 704)
+	(text "color" (rect 5 0 41 20)(font "Intel Clear" (font_size 8)))
+	(text "inst6" (rect 8 73 39 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "color[11..0]" (rect 0 0 81 20)(font "Intel Clear" (font_size 8)))
+		(text "color[11..0]" (rect 21 27 102 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "canDraw" (rect 0 0 61 20)(font "Intel Clear" (font_size 8)))
+		(text "canDraw" (rect 21 43 82 63)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 240 32)
+		(output)
+		(text "colorOut[11..0]" (rect 0 0 108 20)(font "Intel Clear" (font_size 8)))
+		(text "colorOut[11..0]" (rect 111 27 219 47)(font "Intel Clear" (font_size 8)))
+		(line (pt 240 32)(pt 224 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 224 80))
 	)
 )
 (connector
@@ -2258,60 +2255,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 280 1176)
-	(pt 280 1168)
-	(bus)
-)
-(connector
-	(pt 384 1168)
-	(pt 280 1168)
-	(bus)
-)
-(connector
-	(pt 280 1296)
-	(pt 320 1296)
-	(bus)
-)
-(connector
-	(pt 320 1296)
-	(pt 320 1288)
-	(bus)
-)
-(connector
-	(pt 320 1288)
-	(pt 384 1288)
-	(bus)
-)
-(connector
-	(pt 288 1408)
-	(pt 344 1408)
-	(bus)
-)
-(connector
-	(pt 344 1408)
-	(pt 344 1392)
-	(bus)
-)
-(connector
-	(pt 344 1392)
-	(pt 392 1392)
-	(bus)
-)
-(connector
-	(text "isXVisible" (rect -176 800 -114 819)(font "Intel Clear" ))
-	(pt -152 816)
-	(pt -128 816)
-)
-(connector
-	(text "isYVisible" (rect -176 816 -115 835)(font "Intel Clear" ))
-	(pt -128 832)
-	(pt -152 832)
-)
-(connector
-	(pt -64 824)
-	(pt -8 824)
-)
-(connector
 	(text "VGA_CLK" (rect -128 616 -67 635)(font "Intel Clear" ))
 	(pt -88 640)
 	(pt -128 640)
@@ -2350,7 +2293,67 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "YVisibleE[10..0]" (rect -160 704 -60 723)(font "Intel Clear" ))
+	(pt 208 640)
+	(pt 136 640)
+	(bus)
+)
+(connector
+	(text "isXVisible" (rect 96 776 158 795)(font "Intel Clear" ))
+	(pt 120 792)
+	(pt 144 792)
+)
+(connector
+	(text "isYVisible" (rect 96 792 157 811)(font "Intel Clear" ))
+	(pt 144 808)
+	(pt 120 808)
+)
+(connector
+	(pt 256 800)
+	(pt 208 800)
+)
+(connector
+	(pt 256 712)
+	(pt 256 800)
+)
+(connector
+	(pt 256 712)
+	(pt 184 712)
+)
+(connector
+	(pt 184 712)
+	(pt 184 656)
+)
+(connector
+	(pt 184 656)
+	(pt 208 656)
+)
+(connector
+	(pt 424 640)
+	(pt 448 640)
+	(bus)
+)
+(connector
+	(pt 448 640)
+	(pt 456 640)
+	(bus)
+)
+(connector
+	(pt 456 640)
+	(pt 456 632)
+	(bus)
+)
+(connector
+	(pt 456 632)
+	(pt 480 632)
+	(bus)
+)
+(connector
+	(pt 480 632)
+	(pt 488 632)
+	(bus)
+)
+(connector
+	(text "YVisibleE[9..0]" (rect -160 704 -68 723)(font "Intel Clear" ))
 	(pt -96 728)
 	(pt -160 728)
 	(bus)
@@ -2369,3 +2372,5 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 992 192))
 (junction (pt -128 472))
 (junction (pt -160 400))
+(junction (pt 448 640))
+(junction (pt 480 632))

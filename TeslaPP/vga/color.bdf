@@ -40,7 +40,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 112 168 280 184)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "color[3..0]" (rect 5 0 68 15)(font "Arial" ))
+	(text "color[11..0]" (rect 5 0 76 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -54,9 +54,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 640 368 819 384)
+	(rect 640 392 863 408)
 	(text "OUTPUT" (rect 1 0 51 13)(font "Arial" (font_size 6)))
-	(text "color[3..0]" (rect 124 0 186 15)(font "Arial" ))
+	(text "colorOut[11..0]" (rect 124 0 217 15)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -67,6 +67,37 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+)
+(symbol
+	(rect 480 96 592 144)
+	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
+	(text "inst" (rect 3 37 27 53)(font "Arial" (font_size 8)))
+	(port
+		(pt 112 32)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 19 241 35)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 19 122 35)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 112 32)(line_width 3))
+	)
+	(parameter
+		"LPM_CVALUE"
+		"0"
+		"Unsigned value to which outputs will be set"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"12"
+		"Width of output, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+	)
+	(drawing
+		(text "(cvalue)" (rect 21 26 72 42)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 64 24))
+		(line (pt 16 40)(pt 64 40))
+		(line (pt 64 40)(pt 64 24))
+		(line (pt 16 40)(pt 16 24))
+	)
+	(annotation_block (parameter)(rect 592 32 752 92))
 )
 (symbol
 	(rect 504 328 608 424)
@@ -102,31 +133,14 @@ https://fpgasoftware.intel.com/eula.
 	)
 	(parameter
 		"size"
-		"4"
+		"12"
 		""
 		(type "PARAMETER_SIGNED_DEC")	)
 	(drawing
 		(text " MX" (rect 40 40 68 56)(font "Arial" (color 0 0 0)(font_size 8)(bold)))
 		(rectangle (rect 16 16 88 80))
 	)
-	(annotation_block (parameter)(rect 608 288 777 326))
-)
-(symbol
-	(rect 320 440 352 472)
-	(text "GND" (rect 8 16 33 29)(font "Arial" (font_size 6)))
-	(text "gndskoakdaos" (rect 3 21 99 36)(font "Arial" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 26 16)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 26 16)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
+	(annotation_block (parameter)(rect 608 288 806 328))
 )
 (connector
 	(pt 480 392)
@@ -144,11 +158,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 608 376)
-	(pt 640 376)
-	(bus)
-)
-(connector
 	(pt 264 296)
 	(pt 456 296)
 )
@@ -159,17 +168,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 552 432)
 	(pt 552 424)
-)
-(connector
-	(text "0" (rect 320 435 339 443)(font "Intel Clear" )(vertical))
-	(pt 336 440)
-	(pt 336 424)
-)
-(connector
-	(text "0,0,0,0" (rect 476 326 495 369)(font "Intel Clear" )(vertical))
-	(pt 496 360)
-	(pt 496 320)
-	(bus)
 )
 (connector
 	(pt 456 432)
@@ -188,5 +186,40 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 392 176)
 	(pt 392 280)
+	(bus)
+)
+(connector
+	(pt 592 128)
+	(pt 608 128)
+	(bus)
+)
+(connector
+	(pt 608 264)
+	(pt 608 128)
+	(bus)
+)
+(connector
+	(pt 608 264)
+	(pt 496 264)
+	(bus)
+)
+(connector
+	(pt 496 264)
+	(pt 496 360)
+	(bus)
+)
+(connector
+	(pt 608 376)
+	(pt 632 376)
+	(bus)
+)
+(connector
+	(pt 632 376)
+	(pt 632 400)
+	(bus)
+)
+(connector
+	(pt 632 400)
+	(pt 640 400)
 	(bus)
 )
