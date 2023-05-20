@@ -19,4 +19,33 @@ Intel and sold by Intel or its authorized distributors.  Please
 refer to the applicable agreement for further details, at
 https://fpgasoftware.intel.com/eula.
 */
-(header "graphic" (version "1.4"))
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 184 112)
+	(text "color" (rect 5 0 33 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "VGA_CLK" (rect 0 0 56 19)(font "Intel Clear" (font_size 8)))
+		(text "VGA_CLK" (rect 21 27 77 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "canDraw" (rect 0 0 50 19)(font "Intel Clear" (font_size 8)))
+		(text "canDraw" (rect 21 43 71 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 168 32)
+		(output)
+		(text "color[3..0]" (rect 0 0 59 19)(font "Intel Clear" (font_size 8)))
+		(text "color[3..0]" (rect 88 27 147 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 168 32)(pt 152 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 152 80))
+	)
+)
