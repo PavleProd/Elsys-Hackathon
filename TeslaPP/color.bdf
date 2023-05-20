@@ -69,6 +69,66 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
+	(rect 504 328 608 424)
+	(text "MP2X" (rect 5 0 32 12)(font "Arial" ))
+	(text "mpx1" (rect 8 80 35 92)(font "Arial" ))
+	(port
+		(pt 48 96)
+		(input)
+		(text "S" (rect 0 -16 7 -4)(font "Arial" ))
+		(text "S" (rect 48 63 55 75)(font "Arial" ))
+		(line (pt 48 96)(pt 48 80))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "X0[size-1..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "X0" (rect 21 27 32 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "X1[size-1..0]" (rect 0 0 60 12)(font "Arial" ))
+		(text "X1" (rect 21 59 32 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 104 48)
+		(output)
+		(text "Y[size-1..0]" (rect -88 0 -32 12)(font "Arial" ))
+		(text "Y" (rect 76 43 84 55)(font "Arial" ))
+		(line (pt 104 48)(pt 88 48)(line_width 3))
+	)
+	(parameter
+		"size"
+		"4"
+		""
+		(type "PARAMETER_SIGNED_DEC")	)
+	(drawing
+		(text " MX" (rect 40 40 63 54)(font "Arial" (color 0 0 0)(font_size 8)(bold)))
+		(rectangle (rect 16 16 88 80))
+	)
+	(annotation_block (parameter)(rect 608 288 777 326))
+)
+(symbol
+	(rect 320 440 352 472)
+	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
+	(text "gndskoakdaos" (rect 3 21 73 33)(font "Arial" )(invisible))
+	(port
+		(pt 16 0)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(line (pt 16 8)(pt 16 0))
+	)
+	(drawing
+		(line (pt 8 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 8))
+		(line (pt 8 8)(pt 24 8))
+	)
+)
+(symbol
 	(rect 288 168 520 248)
 	(text "REGX" (rect 5 0 34 12)(font "Arial" ))
 	(text "b" (rect 8 64 13 81)(font "Intel Clear" ))
@@ -130,72 +190,12 @@ https://fpgasoftware.intel.com/eula.
 		"default_value"
 		"15"
 		""
-		(type "PARAMETER_SIGNED_DEC")	)
+		(type "PARAMETER_UNSIGNED_DEC")	)
 	(drawing
 		(text "REGISTAR" (rect 88 32 150 46)(font "Arial" (color 0 0 0)(font_size 8)(bold)))
 		(rectangle (rect 16 16 216 64))
 	)
-	(annotation_block (parameter)(rect 520 104 707 161))
-)
-(symbol
-	(rect 504 328 608 424)
-	(text "MP2X" (rect 5 0 32 12)(font "Arial" ))
-	(text "mpx1" (rect 8 80 35 92)(font "Arial" ))
-	(port
-		(pt 48 96)
-		(input)
-		(text "S" (rect 0 -16 7 -4)(font "Arial" ))
-		(text "S" (rect 48 63 55 75)(font "Arial" ))
-		(line (pt 48 96)(pt 48 80))
-	)
-	(port
-		(pt 0 32)
-		(input)
-		(text "X0[size-1..0]" (rect 0 0 60 12)(font "Arial" ))
-		(text "X0" (rect 21 27 32 39)(font "Arial" ))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "X1[size-1..0]" (rect 0 0 60 12)(font "Arial" ))
-		(text "X1" (rect 21 59 32 71)(font "Arial" ))
-		(line (pt 0 64)(pt 16 64)(line_width 3))
-	)
-	(port
-		(pt 104 48)
-		(output)
-		(text "Y[size-1..0]" (rect -88 0 -32 12)(font "Arial" ))
-		(text "Y" (rect 76 43 84 55)(font "Arial" ))
-		(line (pt 104 48)(pt 88 48)(line_width 3))
-	)
-	(parameter
-		"size"
-		"4"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(text " MX" (rect 40 40 63 54)(font "Arial" (color 0 0 0)(font_size 8)(bold)))
-		(rectangle (rect 16 16 88 80))
-	)
-	(annotation_block (parameter)(rect 608 288 777 326))
-)
-(symbol
-	(rect 320 440 352 472)
-	(text "GND" (rect 8 16 29 26)(font "Arial" (font_size 6)))
-	(text "gndskoakdaos" (rect 3 21 73 33)(font "Arial" )(invisible))
-	(port
-		(pt 16 0)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(line (pt 16 8)(pt 16 0))
-	)
-	(drawing
-		(line (pt 8 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 8))
-		(line (pt 8 8)(pt 24 8))
-	)
+	(annotation_block (parameter)(rect 520 104 720 161))
 )
 (connector
 	(pt 480 392)
@@ -210,12 +210,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 504 360)
 	(pt 496 360)
-	(bus)
-)
-(connector
-	(text "0,0,0,0" (rect 480 330 497 360)(font "Intel Clear" )(vertical))
-	(pt 496 360)
-	(pt 496 320)
 	(bus)
 )
 (connector
@@ -258,10 +252,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 456 432)
 )
 (connector
-	(pt 456 432)
-	(pt 552 432)
-)
-(connector
 	(pt 552 432)
 	(pt 552 424)
 )
@@ -269,5 +259,15 @@ https://fpgasoftware.intel.com/eula.
 	(text "0" (rect 320 435 337 440)(font "Intel Clear" )(vertical))
 	(pt 336 440)
 	(pt 336 424)
+)
+(connector
+	(text "0,0,0,0" (rect 476 326 493 356)(font "Intel Clear" )(vertical))
+	(pt 496 360)
+	(pt 496 320)
+	(bus)
+)
+(connector
+	(pt 456 432)
+	(pt 552 432)
 )
 (junction (pt 272 192))
