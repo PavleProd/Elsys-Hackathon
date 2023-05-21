@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 88 64 256 80)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "VGA_CLK" (rect 5 0 69 15)(font "Arial" ))
+	(text "VGA_CLK" (rect 5 0 68 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 112 248 128)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "x[10..0]" (rect 5 0 50 15)(font "Arial" ))
+	(text "x[10..0]" (rect 5 0 49 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -74,7 +74,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 168 248 184)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "y[9..0]" (rect 5 0 46 19)(font "Intel Clear" ))
+	(text "y[9..0]" (rect 5 0 45 19)(font "Intel Clear" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -90,7 +90,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 280 256 296)
 	(text "INPUT" (rect 133 0 169 13)(font "Arial" (font_size 6)))
-	(text "maxX[10..0]" (rect 5 0 80 15)(font "Arial" ))
+	(text "maxX[10..0]" (rect 5 0 79 15)(font "Arial" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -106,7 +106,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 80 312 256 328)
 	(text "INPUT" (rect 133 0 169 13)(font "Arial" (font_size 6)))
-	(text "maxY[9..0]" (rect 5 0 74 19)(font "Intel Clear" ))
+	(text "maxY[9..0]" (rect 5 0 73 19)(font "Intel Clear" ))
 	(pt 176 8)
 	(drawing
 		(line (pt 92 12)(pt 117 12))
@@ -133,101 +133,6 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
-)
-(symbol
-	(rect 280 368 504 528)
-	(text "object" (rect 5 0 48 20)(font "Intel Clear" (font_size 8)))
-	(text "inst8" (rect 8 137 39 156)(font "Intel Clear" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "x[10..0]" (rect 0 0 51 20)(font "Intel Clear" (font_size 8)))
-		(text "x[10..0]" (rect 21 27 72 47)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 32)(pt 16 32)(line_width 3))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "y[9..0]" (rect 0 0 43 20)(font "Intel Clear" (font_size 8)))
-		(text "y[9..0]" (rect 21 43 64 63)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 48)(pt 16 48)(line_width 3))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "VGA_CLK" (rect 0 0 64 20)(font "Intel Clear" (font_size 8)))
-		(text "VGA_CLK" (rect 21 59 85 79)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "start_x[10..0]" (rect 0 0 93 20)(font "Intel Clear" (font_size 8)))
-		(text "start_x[10..0]" (rect 21 75 114 95)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "start_y[9..0]" (rect 0 0 84 20)(font "Intel Clear" (font_size 8)))
-		(text "start_y[9..0]" (rect 21 91 105 111)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "end_x[10..0]" (rect 0 0 87 20)(font "Intel Clear" (font_size 8)))
-		(text "end_x[10..0]" (rect 21 107 108 127)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 112)(pt 16 112)(line_width 3))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "end_y[9..0]" (rect 0 0 79 20)(font "Intel Clear" (font_size 8)))
-		(text "end_y[9..0]" (rect 21 123 100 143)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 128)(pt 16 128)(line_width 3))
-	)
-	(port
-		(pt 224 32)
-		(output)
-		(text "isColliding" (rect 0 0 73 20)(font "Intel Clear" (font_size 8)))
-		(text "isColliding" (rect 130 27 203 47)(font "Intel Clear" (font_size 8)))
-		(line (pt 224 32)(pt 208 32))
-	)
-	(drawing
-		(rectangle (rect 16 16 208 144))
-	)
-)
-(symbol
-	(rect 320 624 432 672)
-	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
-	(text "inst6" (rect 3 37 34 56)(font "Intel Clear" ))
-	(port
-		(pt 112 32)
-		(output)
-		(text "result[LPM_WIDTH-1..0]" (rect 75 19 241 35)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 75 19 122 35)(font "Arial" (font_size 8)))
-		(line (pt 64 32)(pt 112 32)(line_width 3))
-	)
-	(parameter
-		"LPM_CVALUE"
-		"0"
-		"Unsigned value to which outputs will be set"
-	)
-	(parameter
-		"LPM_WIDTH"
-		"12"
-		"Width of output, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
-	)
-	(drawing
-		(text "(cvalue)" (rect 21 26 72 42)(font "Arial" (font_size 8)))
-		(line (pt 16 24)(pt 64 24))
-		(line (pt 16 40)(pt 64 40))
-		(line (pt 64 40)(pt 64 24))
-		(line (pt 16 40)(pt 16 24))
-	)
-	(annotation_block (parameter)(rect 432 560 592 620))
 )
 (symbol
 	(rect 240 1048 464 1208)
@@ -626,37 +531,6 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 32 624 144 672)
-	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
-	(text "inst5" (rect 3 37 34 56)(font "Intel Clear" ))
-	(port
-		(pt 112 32)
-		(output)
-		(text "result[LPM_WIDTH-1..0]" (rect 75 19 241 35)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 75 19 122 35)(font "Arial" (font_size 8)))
-		(line (pt 64 32)(pt 112 32)(line_width 3))
-	)
-	(parameter
-		"LPM_CVALUE"
-		"266"
-		"Unsigned value to which outputs will be set"
-	)
-	(parameter
-		"LPM_WIDTH"
-		"11"
-		"Width of output, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
-	)
-	(drawing
-		(text "(cvalue)" (rect 21 26 72 42)(font "Arial" (font_size 8)))
-		(line (pt 16 24)(pt 64 24))
-		(line (pt 16 40)(pt 64 40))
-		(line (pt 64 40)(pt 64 24))
-		(line (pt 16 40)(pt 16 24))
-	)
-	(annotation_block (parameter)(rect 144 560 304 620))
-)
-(symbol
 	(rect -272 968 -160 1016)
 	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
 	(text "inst10" (rect 3 37 43 56)(font "Intel Clear" ))
@@ -750,9 +624,9 @@ https://fpgasoftware.intel.com/eula.
 	(annotation_block (parameter)(rect 48 1240 208 1300))
 )
 (symbol
-	(rect 1072 360 1296 520)
+	(rect 280 368 504 528)
 	(text "object" (rect 5 0 48 20)(font "Intel Clear" (font_size 8)))
-	(text "inst8" (rect 8 137 39 156)(font "Intel Clear" ))
+	(text "qqqq" (rect 8 137 41 156)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -814,71 +688,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1112 616 1224 664)
+	(rect 32 624 144 672)
 	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
-	(text "inst6" (rect 3 37 34 56)(font "Intel Clear" ))
-	(port
-		(pt 112 32)
-		(output)
-		(text "result[LPM_WIDTH-1..0]" (rect 75 19 241 35)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 75 19 122 35)(font "Arial" (font_size 8)))
-		(line (pt 64 32)(pt 112 32)(line_width 3))
-	)
-	(parameter
-		"LPM_CVALUE"
-		"0"
-		"Unsigned value to which outputs will be set"
-	)
-	(parameter
-		"LPM_WIDTH"
-		"12"
-		"Width of output, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
-	)
-	(drawing
-		(text "(cvalue)" (rect 21 26 72 42)(font "Arial" (font_size 8)))
-		(line (pt 16 24)(pt 64 24))
-		(line (pt 16 40)(pt 64 40))
-		(line (pt 64 40)(pt 64 24))
-		(line (pt 16 40)(pt 16 24))
-	)
-	(annotation_block (parameter)(rect 1224 552 1384 612))
-)
-(symbol
-	(rect 1384 632 1432 664)
-	(text "TRI" (rect 1 0 21 13)(font "Arial" (font_size 6)))
-	(text "inst19" (rect 3 21 43 40)(font "Intel Clear" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 18 23)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 18 23)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 14 16))
-	)
-	(port
-		(pt 24 0)
-		(input)
-		(text "OE" (rect 26 0 42 16)(font "Courier New" (bold))(invisible))
-		(text "OE" (rect 26 0 42 16)(font "Courier New" (bold))(invisible))
-		(line (pt 24 12)(pt 24 0))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 56 23)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 56 23)(font "Courier New" (bold))(invisible))
-		(line (pt 32 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 14 25)(pt 14 7))
-		(line (pt 14 25)(pt 32 16))
-		(line (pt 14 7)(pt 32 16))
-	)
-)
-(symbol
-	(rect 824 616 936 664)
-	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
-	(text "inst5" (rect 3 37 34 56)(font "Intel Clear" ))
+	(text "wewewe" (rect 3 37 56 56)(font "Intel Clear" ))
 	(port
 		(pt 112 32)
 		(output)
@@ -904,7 +716,38 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 64 40)(pt 64 24))
 		(line (pt 16 40)(pt 16 24))
 	)
-	(annotation_block (parameter)(rect 936 552 1096 612))
+	(annotation_block (parameter)(rect 144 560 304 620))
+)
+(symbol
+	(rect 320 624 432 672)
+	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
+	(text "tewt" (rect 3 37 30 56)(font "Intel Clear" ))
+	(port
+		(pt 112 32)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 19 241 35)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 19 122 35)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 112 32)(line_width 3))
+	)
+	(parameter
+		"LPM_CVALUE"
+		"0"
+		"Unsigned value to which outputs will be set"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"12"
+		"Width of output, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+	)
+	(drawing
+		(text "(cvalue)" (rect 21 26 72 42)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 64 24))
+		(line (pt 16 40)(pt 64 40))
+		(line (pt 64 40)(pt 64 24))
+		(line (pt 16 40)(pt 16 24))
+	)
+	(annotation_block (parameter)(rect 432 560 592 620))
 )
 (connector
 	(pt 248 248)
@@ -1270,106 +1113,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 272 840)
 	(bus)
 )
-(connector
-	(pt 960 392)
-	(pt 960 384)
-	(bus)
-)
-(connector
-	(pt 912 408)
-	(pt 912 400)
-	(bus)
-)
-(connector
-	(pt 992 424)
-	(pt 992 432)
-)
-(connector
-	(text "VGA_CLK" (rect 890 408 951 427)(font "Intel Clear" ))
-	(pt 992 432)
-	(pt 880 432)
-)
-(connector
-	(pt 1072 424)
-	(pt 992 424)
-)
-(connector
-	(text "eX1[10..0]" (rect 936 624 1002 643)(font "Intel Clear" ))
-	(pt 936 648)
-	(pt 960 648)
-	(bus)
-)
-(connector
-	(text "y[9..0]" (rect 922 384 962 403)(font "Intel Clear" ))
-	(pt 1072 408)
-	(pt 912 408)
-	(bus)
-)
-(connector
-	(text "x[10..0]" (rect 970 368 1018 387)(font "Intel Clear" ))
-	(pt 1072 392)
-	(pt 960 392)
-	(bus)
-)
-(connector
-	(text "eX1[10..0]" (rect 1002 448 1068 467)(font "Intel Clear" ))
-	(pt 1072 472)
-	(pt 992 472)
-	(bus)
-)
-(connector
-	(text "c1[11..0]" (rect 1224 624 1280 643)(font "Intel Clear" ))
-	(pt 1224 648)
-	(pt 1384 648)
-	(bus)
-)
-(connector
-	(pt 1408 392)
-	(pt 1408 632)
-)
-(connector
-	(pt 1432 648)
-	(pt 1520 648)
-	(bus)
-)
-(connector
-	(text "zero[10..0]" (rect 1026 416 1094 435)(font "Intel Clear" ))
-	(pt 1072 440)
-	(pt 1016 440)
-	(bus)
-)
-(connector
-	(text "zero[9..0]" (rect 1034 432 1094 451)(font "Intel Clear" ))
-	(pt 1072 456)
-	(pt 1024 456)
-	(bus)
-)
-(connector
-	(text "maxY[9..0]" (rect 833 462 852 530)(font "Intel Clear" )(vertical))
-	(pt 856 488)
-	(pt 856 528)
-	(bus)
-)
-(connector
-	(pt 1408 392)
-	(pt 1296 392)
-)
-(connector
-	(pt 1520 648)
-	(pt 1520 688)
-	(bus)
-)
-(connector
-	(pt 856 488)
-	(pt 1072 488)
-	(bus)
-)
-(connector
-	(pt 1072 488)
-	(pt 1080 488)
-	(bus)
-)
 (junction (pt 280 496))
 (junction (pt 808 216))
 (junction (pt 728 1000))
-(junction (pt 1072 488))
