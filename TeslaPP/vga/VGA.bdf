@@ -55,9 +55,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect -96 16 72 32)
+	(rect -120 -16 48 0)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "sec[5..0]" (rect 5 0 60 15)(font "Arial" ))
+	(text "tick" (rect 5 0 26 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -71,9 +71,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect -200 -8 -32 8)
+	(rect -96 16 72 32)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "tick" (rect 5 0 27 15)(font "Arial" ))
+	(text "sec[6..0]" (rect 5 0 60 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1331,7 +1331,7 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 144 776 208 824)
+	(rect 176 800 240 848)
 	(text "AND2" (rect 1 0 32 13)(font "Arial" (font_size 6)))
 	(text "inst32432432" (rect 3 37 92 52)(font "Arial" ))
 	(port
@@ -1442,9 +1442,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect -64 608 160 800)
+	(rect -56 608 168 800)
 	(text "objectManagement" (rect 5 0 140 20)(font "Intel Clear" (font_size 8)))
-	(text "inst3" (rect 8 169 39 188)(font "Intel Clear" ))
+	(text "inst1" (rect 8 169 39 188)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1455,8 +1455,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 48)
 		(input)
-		(text "sec[5..0]" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
-		(text "sec[5..0]" (rect 21 43 78 63)(font "Intel Clear" (font_size 8)))
+		(text "sec[6..0]" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
+		(text "sec[6..0]" (rect 21 43 78 63)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
@@ -2301,24 +2301,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "isXVisible" (rect 96 776 158 795)(font "Intel Clear" ))
-	(pt 120 792)
-	(pt 144 792)
-)
-(connector
-	(text "isYVisible" (rect 96 792 157 811)(font "Intel Clear" ))
-	(pt 144 808)
-	(pt 120 808)
-)
-(connector
-	(pt 208 800)
-	(pt 280 800)
-)
-(connector
-	(pt 280 800)
-	(pt 280 712)
-)
-(connector
 	(pt 280 712)
 	(pt 208 712)
 )
@@ -2351,11 +2333,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 160 640)
-	(pt 232 640)
-	(bus)
-)
-(connector
 	(pt -128 656)
 	(pt -128 648)
 	(bus)
@@ -2373,11 +2350,6 @@ https://fpgasoftware.intel.com/eula.
 	(text "xCoord[10..0]" (rect -264 672 -177 691)(font "Intel Clear" ))
 	(pt -88 696)
 	(pt -304 696)
-	(bus)
-)
-(connector
-	(pt -88 696)
-	(pt -88 688)
 	(bus)
 )
 (connector
@@ -2438,47 +2410,75 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt -64 752)
-	(pt -136 752)
+	(text "tick" (rect -112 621 -93 643)(font "Intel Clear" )(vertical))
+	(pt -88 640)
+	(pt -88 624)
+)
+(connector
+	(text "isXVisible" (rect 128 800 190 819)(font "Intel Clear" ))
+	(pt 152 816)
+	(pt 176 816)
+)
+(connector
+	(text "isYVisible" (rect 128 816 189 835)(font "Intel Clear" ))
+	(pt 176 832)
+	(pt 152 832)
+)
+(connector
+	(pt 280 824)
+	(pt 240 824)
+)
+(connector
+	(pt 280 712)
+	(pt 280 824)
+)
+(connector
+	(pt -56 640)
+	(pt -88 640)
+)
+(connector
+	(text "sec[6..0]" (rect -128 632 -74 651)(font "Intel Clear" ))
+	(pt -56 656)
+	(pt -128 656)
 	(bus)
 )
 (connector
-	(pt -64 736)
-	(pt -144 736)
-	(bus)
+	(pt -56 672)
+	(pt -88 672)
 )
 (connector
-	(pt -64 720)
-	(pt -184 720)
-)
-(connector
-	(pt -64 704)
-	(pt -104 704)
+	(pt -88 696)
+	(pt -88 688)
 	(bus)
 )
 (connector
 	(pt -88 688)
-	(pt -64 688)
+	(pt -56 688)
 	(bus)
 )
 (connector
-	(pt -88 672)
-	(pt -64 672)
-)
-(connector
-	(text "sec[5..0]" (rect -128 632 -74 651)(font "Intel Clear" ))
-	(pt -128 656)
-	(pt -64 656)
+	(pt -56 704)
+	(pt -104 704)
 	(bus)
 )
 (connector
-	(pt -64 640)
-	(pt -88 640)
+	(pt -56 720)
+	(pt -184 720)
 )
 (connector
-	(text "tick" (rect -112 621 -93 643)(font "Intel Clear" )(vertical))
-	(pt -88 640)
-	(pt -88 624)
+	(pt -56 736)
+	(pt -144 736)
+	(bus)
+)
+(connector
+	(pt -56 752)
+	(pt -136 752)
+	(bus)
+)
+(connector
+	(pt 232 640)
+	(pt 168 640)
+	(bus)
 )
 (junction (pt 680 200))
 (junction (pt 1016 136))

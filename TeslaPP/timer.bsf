@@ -34,15 +34,15 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 200 32)
 		(output)
-		(text "SEC[5..0]" (rect 0 0 62 20)(font "Intel Clear" (font_size 8)))
-		(text "SEC[5..0]" (rect 117 27 179 47)(font "Intel Clear" (font_size 8)))
+		(text "SEC[6..0]" (rect 0 0 62 20)(font "Intel Clear" (font_size 8)))
+		(text "SEC[6..0]" (rect 117 27 179 47)(font "Intel Clear" (font_size 8)))
 		(line (pt 200 32)(pt 184 32)(line_width 3))
 	)
 	(port
 		(pt 200 48)
 		(output)
-		(text "MIN[5..0]" (rect 0 0 63 20)(font "Intel Clear" (font_size 8)))
-		(text "MIN[5..0]" (rect 116 43 179 63)(font "Intel Clear" (font_size 8)))
+		(text "MIN[6..0]" (rect 0 0 63 20)(font "Intel Clear" (font_size 8)))
+		(text "MIN[6..0]" (rect 116 43 179 63)(font "Intel Clear" (font_size 8)))
 		(line (pt 200 48)(pt 184 48)(line_width 3))
 	)
 	(port

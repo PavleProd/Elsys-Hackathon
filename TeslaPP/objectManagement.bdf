@@ -120,9 +120,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 104 24 272 40)
+	(rect 136 0 304 16)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "sec[5..0]" (rect 5 0 59 15)(font "Arial" ))
+	(text "tick" (rect 5 0 26 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -136,9 +136,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 136 0 304 16)
+	(rect 104 24 272 40)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "tick" (rect 5 0 27 15)(font "Arial" ))
+	(text "sec[6..0]" (rect 5 0 60 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1279,9 +1279,9 @@ https://fpgasoftware.intel.com/eula.
 	(flipx)
 )
 (symbol
-	(rect 960 1184 1168 1344)
+	(rect 944 1184 1152 1344)
 	(text "tiles" (rect 5 0 34 20)(font "Intel Clear" (font_size 8)))
-	(text "inst34" (rect 8 137 48 156)(font "Intel Clear" ))
+	(text "inst1" (rect 8 137 39 156)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1313,8 +1313,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 96)
 		(input)
-		(text "sec[5..0]" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
-		(text "sec[5..0]" (rect 21 91 78 111)(font "Intel Clear" (font_size 8)))
+		(text "sec[6..0]" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
+		(text "sec[6..0]" (rect 21 91 78 111)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
@@ -2193,65 +2193,65 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1200 1256)
 )
 (connector
-	(pt 864 1216)
-	(pt 864 1208)
+	(pt 832 1216)
+	(pt 832 1208)
 )
 (connector
-	(pt 904 1232)
-	(pt 904 1224)
+	(pt 872 1232)
+	(pt 872 1224)
 	(bus)
 )
 (connector
-	(text "x[10..0]" (rect 834 1200 882 1219)(font "Intel Clear" ))
-	(pt 904 1224)
-	(pt 824 1224)
+	(text "x[10..0]" (rect 802 1200 850 1219)(font "Intel Clear" ))
+	(pt 872 1224)
+	(pt 792 1224)
 	(bus)
 )
 (connector
-	(text "tick" (rect 880 1323 899 1345)(font "Intel Clear" )(vertical))
-	(pt 904 1352)
-	(pt 904 1296)
+	(text "tick" (rect 848 1323 867 1345)(font "Intel Clear" )(vertical))
+	(pt 872 1352)
+	(pt 872 1296)
 )
 (connector
-	(pt 1168 1216)
+	(text "VGA_CLK" (rect 832 1192 893 1211)(font "Intel Clear" ))
+	(pt 944 1216)
+	(pt 832 1216)
+)
+(connector
+	(pt 944 1232)
+	(pt 872 1232)
+	(bus)
+)
+(connector
+	(text "y[9..0]" (rect 850 1224 890 1243)(font "Intel Clear" ))
+	(pt 944 1248)
+	(pt 840 1248)
+	(bus)
+)
+(connector
+	(text "maxY[9..0]" (rect 826 1240 894 1259)(font "Intel Clear" ))
+	(pt 944 1264)
+	(pt 816 1264)
+	(bus)
+)
+(connector
+	(text "sec[6..0]" (rect 874 1256 928 1275)(font "Intel Clear" ))
+	(pt 944 1280)
+	(pt 864 1280)
+	(bus)
+)
+(connector
+	(pt 944 1296)
+	(pt 872 1296)
+)
+(connector
+	(pt 1152 1216)
 	(pt 1224 1216)
 	(bus)
 )
 (connector
-	(pt 1168 1232)
+	(pt 1152 1232)
 	(pt 1200 1232)
-)
-(connector
-	(pt 960 1296)
-	(pt 904 1296)
-)
-(connector
-	(text "maxY[9..0]" (rect 858 1240 926 1259)(font "Intel Clear" ))
-	(pt 960 1264)
-	(pt 848 1264)
-	(bus)
-)
-(connector
-	(text "y[9..0]" (rect 882 1224 922 1243)(font "Intel Clear" ))
-	(pt 960 1248)
-	(pt 872 1248)
-	(bus)
-)
-(connector
-	(pt 960 1232)
-	(pt 904 1232)
-	(bus)
-)
-(connector
-	(text "VGA_CLK" (rect 864 1192 925 1211)(font "Intel Clear" ))
-	(pt 960 1216)
-	(pt 864 1216)
-)
-(connector
-	(text "sec[5..0]" (rect 906 1256 960 1275)(font "Intel Clear" ))
-	(pt 960 1280)
-	(pt 896 1280)
-	(bus)
 )
 (junction (pt 280 496))
 (junction (pt 728 1000))

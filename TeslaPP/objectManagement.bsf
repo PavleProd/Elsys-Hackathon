@@ -34,8 +34,8 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 48)
 		(input)
-		(text "sec[5..0]" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
-		(text "sec[5..0]" (rect 21 43 78 63)(font "Intel Clear" (font_size 8)))
+		(text "sec[6..0]" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
+		(text "sec[6..0]" (rect 21 43 78 63)(font "Intel Clear" (font_size 8)))
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
