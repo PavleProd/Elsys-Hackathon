@@ -122,7 +122,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 104 24 272 40)
 	(text "INPUT" (rect 125 0 161 13)(font "Arial" (font_size 6)))
-	(text "sec[5..0]" (rect 5 0 60 15)(font "Arial" ))
+	(text "sec[5..0]" (rect 5 0 59 15)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -1279,90 +1279,9 @@ https://fpgasoftware.intel.com/eula.
 	(flipx)
 )
 (symbol
-	(rect 880 1552 1040 1624)
-	(text "CMPX" (rect 5 0 43 15)(font "Arial" ))
-	(text "inst28" (rect 8 56 48 75)(font "Intel Clear" ))
-	(port
-		(pt 48 0)
-		(input)
-		(text "A[size-1..0]" (rect 0 0 69 15)(font "Arial" ))
-		(text "  A" (rect 40 16 55 31)(font "Arial" ))
-		(line (pt 48 0)(pt 48 17)(line_width 3))
-	)
-	(port
-		(pt 104 0)
-		(input)
-		(text "B[size-1..0]" (rect 0 0 70 15)(font "Arial" ))
-		(text "  B" (rect 96 16 112 31)(font "Arial" ))
-		(line (pt 104 0)(pt 104 17)(line_width 3))
-	)
-	(port
-		(pt 48 72)
-		(output)
-		(text "ls" (rect 0 -40 11 -25)(font "Arial" ))
-		(text "A<B" (rect 40 40 65 55)(font "Arial" ))
-		(line (pt 48 72)(pt 48 56))
-	)
-	(port
-		(pt 80 72)
-		(output)
-		(text "eq" (rect 0 -40 16 -25)(font "Arial" ))
-		(text "A=B" (rect 72 40 97 55)(font "Arial" ))
-		(line (pt 80 72)(pt 80 56))
-	)
-	(port
-		(pt 112 72)
-		(output)
-		(text "gr" (rect 0 -40 12 -25)(font "Arial" ))
-		(text "A>B" (rect 104 40 129 55)(font "Arial" ))
-		(line (pt 112 72)(pt 112 56))
-	)
-	(parameter
-		"size"
-		"6"
-		""
-		(type "PARAMETER_SIGNED_DEC")	)
-	(drawing
-		(text " CMP" (rect 64 24 102 40)(font "Arial" (color 0 0 0)(font_size 8)(bold)))
-		(rectangle (rect 16 16 136 56))
-	)
-	(annotation_block (parameter)(rect 1040 1512 1238 1552))
-)
-(symbol
-	(rect 864 1416 976 1464)
-	(text "LPM_CONSTANT" (rect 4 0 155 19)(font "Arial" (font_size 10)))
-	(text "inst29" (rect 3 37 43 56)(font "Intel Clear" ))
-	(port
-		(pt 112 32)
-		(output)
-		(text "result[LPM_WIDTH-1..0]" (rect 75 19 241 35)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 75 19 122 35)(font "Arial" (font_size 8)))
-		(line (pt 64 32)(pt 112 32)(line_width 3))
-	)
-	(parameter
-		"LPM_CVALUE"
-		"1"
-		"Unsigned value to which outputs will be set"
-	)
-	(parameter
-		"LPM_WIDTH"
-		"6"
-		"Width of output, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
-	)
-	(drawing
-		(text "(cvalue)" (rect 21 26 72 42)(font "Arial" (font_size 8)))
-		(line (pt 16 24)(pt 64 24))
-		(line (pt 16 40)(pt 64 40))
-		(line (pt 64 40)(pt 64 24))
-		(line (pt 16 40)(pt 16 24))
-	)
-	(annotation_block (parameter)(rect 976 1352 1136 1412))
-)
-(symbol
-	(rect 976 1184 1184 1344)
+	(rect 960 1184 1168 1344)
 	(text "tiles" (rect 5 0 34 20)(font "Intel Clear" (font_size 8)))
-	(text "inst31" (rect 8 137 48 156)(font "Intel Clear" ))
+	(text "inst34" (rect 8 137 48 156)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1394,9 +1313,9 @@ https://fpgasoftware.intel.com/eula.
 	(port
 		(pt 0 96)
 		(input)
-		(text "start" (rect 0 0 33 20)(font "Intel Clear" (font_size 8)))
-		(text "start" (rect 21 91 54 111)(font "Intel Clear" (font_size 8)))
-		(line (pt 0 96)(pt 16 96))
+		(text "sec[5..0]" (rect 0 0 57 20)(font "Intel Clear" (font_size 8)))
+		(text "sec[5..0]" (rect 21 91 78 111)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
 	)
 	(port
 		(pt 0 112)
@@ -2219,27 +2138,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(text "sec[5..0]" (rect 904 1496 923 1550)(font "Intel Clear" )(vertical))
-	(pt 928 1552)
-	(pt 928 1512)
-	(bus)
-)
-(connector
-	(text "start" (rect 936 1616 955 1644)(font "Intel Clear" )(vertical))
-	(pt 960 1656)
-	(pt 960 1624)
-)
-(connector
-	(pt 984 1448)
-	(pt 976 1448)
-	(bus)
-)
-(connector
-	(pt 984 1448)
-	(pt 984 1552)
-	(bus)
-)
-(connector
 	(pt 1368 1216)
 	(pt 1368 1224)
 )
@@ -2286,15 +2184,6 @@ https://fpgasoftware.intel.com/eula.
 	(bus)
 )
 (connector
-	(pt 1184 1216)
-	(pt 1224 1216)
-	(bus)
-)
-(connector
-	(pt 1184 1232)
-	(pt 1200 1232)
-)
-(connector
 	(text "isAnyTile" (rect 1224 1232 1281 1251)(font "Intel Clear" ))
 	(pt 1200 1256)
 	(pt 1344 1256)
@@ -2304,59 +2193,65 @@ https://fpgasoftware.intel.com/eula.
 	(pt 1200 1256)
 )
 (connector
-	(pt 904 1216)
-	(pt 904 1208)
+	(pt 864 1216)
+	(pt 864 1208)
 )
 (connector
-	(pt 944 1232)
-	(pt 944 1224)
+	(pt 904 1232)
+	(pt 904 1224)
 	(bus)
 )
 (connector
-	(text "x[10..0]" (rect 874 1200 922 1219)(font "Intel Clear" ))
-	(pt 944 1224)
-	(pt 864 1224)
+	(text "x[10..0]" (rect 834 1200 882 1219)(font "Intel Clear" ))
+	(pt 904 1224)
+	(pt 824 1224)
 	(bus)
 )
 (connector
-	(text "start" (rect 872 1278 891 1306)(font "Intel Clear" )(vertical))
+	(text "tick" (rect 880 1323 899 1345)(font "Intel Clear" )(vertical))
+	(pt 904 1352)
+	(pt 904 1296)
+)
+(connector
+	(pt 1168 1216)
+	(pt 1224 1216)
+	(bus)
+)
+(connector
+	(pt 1168 1232)
+	(pt 1200 1232)
+)
+(connector
+	(pt 960 1296)
+	(pt 904 1296)
+)
+(connector
+	(text "maxY[9..0]" (rect 858 1240 926 1259)(font "Intel Clear" ))
+	(pt 960 1264)
+	(pt 848 1264)
+	(bus)
+)
+(connector
+	(text "y[9..0]" (rect 882 1224 922 1243)(font "Intel Clear" ))
+	(pt 960 1248)
+	(pt 872 1248)
+	(bus)
+)
+(connector
+	(pt 960 1232)
+	(pt 904 1232)
+	(bus)
+)
+(connector
+	(text "VGA_CLK" (rect 864 1192 925 1211)(font "Intel Clear" ))
+	(pt 960 1216)
+	(pt 864 1216)
+)
+(connector
+	(text "sec[5..0]" (rect 906 1256 960 1275)(font "Intel Clear" ))
+	(pt 960 1280)
 	(pt 896 1280)
-	(pt 896 1312)
-)
-(connector
-	(pt 976 1280)
-	(pt 896 1280)
-)
-(connector
-	(text "maxY[9..0]" (rect 898 1240 966 1259)(font "Intel Clear" ))
-	(pt 976 1264)
-	(pt 888 1264)
 	(bus)
-)
-(connector
-	(text "y[9..0]" (rect 922 1224 962 1243)(font "Intel Clear" ))
-	(pt 976 1248)
-	(pt 912 1248)
-	(bus)
-)
-(connector
-	(pt 976 1232)
-	(pt 944 1232)
-	(bus)
-)
-(connector
-	(text "VGA_CLK" (rect 904 1192 965 1211)(font "Intel Clear" ))
-	(pt 976 1216)
-	(pt 904 1216)
-)
-(connector
-	(pt 976 1296)
-	(pt 944 1296)
-)
-(connector
-	(text "tick" (rect 920 1323 939 1345)(font "Intel Clear" )(vertical))
-	(pt 944 1352)
-	(pt 944 1296)
 )
 (junction (pt 280 496))
 (junction (pt 728 1000))
