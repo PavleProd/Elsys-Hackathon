@@ -39,7 +39,6 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CEBA4F23C7
-set_global_assignment -name TOP_LEVEL_ENTITY timer
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:54:58  MAY 20, 2023"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Lite Edition"
@@ -59,6 +58,38 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_location_assignment PIN_H8 -to HSYNC
 set_location_assignment PIN_G8 -to VSYNC
 set_location_assignment PIN_M9 -to VGA_CLK
+set_location_assignment PIN_U1 -to LED_A
+set_location_assignment PIN_N1 -to LED_D
+set_location_assignment PIN_N2 -to LED_F
+set_location_assignment PIN_Y3 -to LED_G
+set_location_assignment PIN_W2 -to LED_H
+set_location_assignment PIN_AA1 -to LED_J
+set_location_assignment PIN_AA2 -to LED_K
+set_location_assignment PIN_U2 -to LED_S
+set_location_assignment PIN_D3 -to PS2_CLK
+set_location_assignment PIN_G2 -to PS2_DAT
+set_location_assignment PIN_U7 -to K0
+set_location_assignment PIN_D17 -to BUZZ
+set_instance_assignment -name IO_STANDARD "2.5 V" -to K0 -entity TeslaPP
+set_instance_assignment -name IO_STANDARD "2.5 V" -to BUZZ -entity TeslaPP
+set_location_assignment PIN_U13 -to SW_0
+set_location_assignment PIN_A5 -to color[11]
+set_location_assignment PIN_C9 -to color[10]
+set_location_assignment PIN_B10 -to color[9]
+set_location_assignment PIN_A9 -to color[8]
+set_location_assignment PIN_J8 -to color[7]
+set_location_assignment PIN_J7 -to color[6]
+set_location_assignment PIN_K7 -to color[5]
+set_location_assignment PIN_L7 -to color[4]
+set_location_assignment PIN_A7 -to color[3]
+set_location_assignment PIN_A8 -to color[2]
+set_location_assignment PIN_B7 -to color[1]
+set_location_assignment PIN_B6 -to color[0]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity TeslaPP -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity TeslaPP -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity TeslaPP -section_id Top
+set_global_assignment -name TOP_LEVEL_ENTITY TeslaPP
+set_global_assignment -name BDF_FILE timer.bdf
 set_global_assignment -name BDF_FILE TeslaPP.bdf
 set_global_assignment -name BDF_FILE vga/VGA.bdf
 set_global_assignment -name BDF_FILE vga/inRangeCMP11.bdf
@@ -88,59 +119,10 @@ set_global_assignment -name BDF_FILE "Additional Components/CD8.bdf"
 set_global_assignment -name VHDL_FILE "Additional Components/Binary2BCD.vhd"
 set_global_assignment -name VHDL_FILE "Additional Components/ALUX.vhd"
 set_global_assignment -name BDF_FILE ps2/buzzer.bdf
-set_location_assignment PIN_U1 -to LED_A
-set_location_assignment PIN_N1 -to LED_D
-set_location_assignment PIN_N2 -to LED_F
-set_location_assignment PIN_Y3 -to LED_G
-set_location_assignment PIN_W2 -to LED_H
-set_location_assignment PIN_AA1 -to LED_J
-set_location_assignment PIN_AA2 -to LED_K
-set_location_assignment PIN_U2 -to LED_S
-set_location_assignment PIN_D3 -to PS2_CLK
-set_location_assignment PIN_G2 -to PS2_DAT
-set_location_assignment PIN_U7 -to K0
-set_location_assignment PIN_D17 -to BUZZ
 set_global_assignment -name BDF_FILE objectManagement.bdf
 set_global_assignment -name BDF_FILE object.bdf
-set_instance_assignment -name IO_STANDARD "2.5 V" -to K0 -entity buzzer
-set_instance_assignment -name IO_STANDARD "2.5 V" -to BUZZ -entity buzzer
-set_location_assignment PIN_U13 -to SW_0
-set_location_assignment PIN_A5 -to color[11]
-set_location_assignment PIN_C9 -to color[10]
-set_location_assignment PIN_B10 -to color[9]
-set_location_assignment PIN_A9 -to color[8]
-set_location_assignment PIN_J8 -to color[7]
-set_location_assignment PIN_J7 -to color[6]
-set_location_assignment PIN_K7 -to color[5]
-set_location_assignment PIN_L7 -to color[4]
-set_location_assignment PIN_A7 -to color[3]
-set_location_assignment PIN_A8 -to color[2]
-set_location_assignment PIN_B7 -to color[1]
-set_location_assignment PIN_B6 -to color[0]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity buzzer -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity buzzer -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity buzzer -section_id Top
-set_global_assignment -name BDF_FILE AllKeysBuzz.bdf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity buzzer -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity TeslaPP -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity TeslaPP -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity TeslaPP -section_id Top
-set_instance_assignment -name IO_STANDARD "2.5 V" -to K0 -entity TeslaPP
-set_instance_assignment -name IO_STANDARD "2.5 V" -to BUZZ -entity TeslaPP
-set_location_assignment PIN_D17 -to BUZZ_ALL
-set_location_assignment PIN_K20 -to IS_BUZZING
-set_global_assignment -name BDF_FILE timer.bdf
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity TeslaPP -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-<<<<<<< Updated upstream
-set_instance_assignment -name IO_STANDARD "2.5 V" -to K0
-set_instance_assignment -name IO_STANDARD "2.5 V" -to BUZZ
-set_location_assignment PIN_M9 -to TIMER_CLK
-set_location_assignment PIN_AA2 -to LEDOUT0
-=======
+set_global_assignment -name BDF_FILE line.bdf
 set_global_assignment -name BDF_FILE horizontalLine.bdf
 set_global_assignment -name BDF_FILE tile.bdf
->>>>>>> Stashed changes
+set_global_assignment -name BDF_FILE tiles.bdf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
