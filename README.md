@@ -1,6 +1,6 @@
 # FPGA Piano Tiles Game
 
-* Game was created in 24 hours at Elsys Easter Europe Hackathon in Belgrade 20-21. of May 2023.
+Created in 24 hours at Elsys Easter Europe Hackathon in Belgrade 20-21. of May 2023.
 
 ## Overview
 This project is a simplified version of the popular Piano Tiles game implemented on a Cyclone V FPGA using Quartus. Game is completely designed directly on hardware, without
