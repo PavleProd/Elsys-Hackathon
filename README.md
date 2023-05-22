@@ -1,9 +1,11 @@
 # FPGA Piano Tiles Game
 
+* Game was created in 24 hours at Elsys Easter Europe Hackathon in Belgrade 20-21. of May 2023.
+
 ## Overview
 This project is a simplified version of the popular Piano Tiles game implemented on a Cyclone V FPGA using Quartus. Game is completely designed directly on hardware, without
 using VHDL language. The game board consists of 8 columns, each controlled by keys A-K on the FPGA board. The objective is to press the corresponding key when a tile reaches the space between
-two blue tiles at the bottom of the screen, mimicking the gameplay of the original game.
+two blue tiles at the bottom of the screen, mimicking the gameplay of the original game. 
 
 ## Team Members
 - <a href=https://github.com/IgorAnton>Igor Antonijevic</a>
